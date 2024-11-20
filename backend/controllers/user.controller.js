@@ -26,9 +26,15 @@ export const register = async (req,res) => {
             phoneNumber, 
             password:hashPasswoed,
             role
-        })
-    } catch (error) {
+        });
 
+        return res.status(201).json({
+            message:"Account created successfully.",
+            success:true
+        });
+
+    } catch (error) {
+        console.log(error);
     }
 }
 
