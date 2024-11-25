@@ -72,7 +72,27 @@ export const getJobById = async (req,res) => {
         };
 
         return res.status(200).json({job, success:true});
-        
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+export const getAdminJobs = async (req,res) => {
+    try {
+        const adminId = req.id;
+        const jobs = await Job.find({created_by:adminId});
+        if(!jobs){
+            return res.status(404).json({
+                message:"Jobs not found.",
+                success:false
+            })
+        };
+        return res.status(200).json({
+            jobs,
+            success:true
+        })
     } catch (error) {
         console.log(error);
     }
