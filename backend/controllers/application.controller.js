@@ -115,6 +115,15 @@ export const updateStatus = async (req,res) => {
             })
         };
 
+        // find the application by application id
+        const application = await Application.findOne({_id:applicationId});
+        if(!application){
+            return res.status(404).json({
+                message:"Application not found.",
+                success:false
+            })
+        };
+
         
     } catch (error) {
         console.log(error);
