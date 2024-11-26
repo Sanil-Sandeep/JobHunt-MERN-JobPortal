@@ -102,3 +102,21 @@ export const getApplicants = async (req,res) => {
         console.log(error);
     }
 }
+
+
+export const updateStatus = async (req,res) => {
+    try {
+        const {status} = req.body;
+        const applicationId = req.params.id;
+        if(!status){
+            return res.status(400).json({
+                message:'status is required',
+                success:false
+            })
+        };
+
+        
+    } catch (error) {
+        console.log(error);
+    }
+}
