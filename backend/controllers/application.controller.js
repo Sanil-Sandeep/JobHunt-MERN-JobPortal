@@ -1,4 +1,5 @@
-import { Application } from "../models/application.model";
+import { Application } from "../models/application.model.js";
+import { Job } from "../models/job.model.js";
 
 export const applyJob = async (req, res) => {
   try {
@@ -21,7 +22,15 @@ export const applyJob = async (req, res) => {
         });
     }
 
-    
+    // check if the job exists
+    const job = await Job.findById(jobId);
+    if (!job) {
+        return res.status(404).json({
+            message: "Job not found",
+            success: false
+        })
+    }
+
   } catch (error) {
     console.log(error);
   }
