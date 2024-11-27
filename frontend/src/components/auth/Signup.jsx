@@ -25,6 +25,10 @@ const Signup = () => {
             <Input type="email" placeholder="Sanil@gmail.com" />
           </div>
           <div className="my-2">
+            <Label>Phone Number</Label>
+            <Input type="password" placeholder="Sanil" />
+          </div>
+          <div className="my-2">
             <Label>Password</Label>
             <Input type="password" placeholder="Sanil" />
           </div>
