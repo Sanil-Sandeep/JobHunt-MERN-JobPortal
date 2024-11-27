@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../shared/Navbar";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
@@ -45,7 +45,7 @@ const Signup = () => {
                 type="text" 
                 value={input.fullname} 
                 name="fullname"
-                onchange={changeEventHandler}
+                onChange={changeEventHandler}
                 placeholder="Sanil" 
             />
           </div>
@@ -55,17 +55,17 @@ const Signup = () => {
                 type="email" 
                 value={input.email} 
                 name="email"
-                onchange={changeEventHandler}
+                onChange={changeEventHandler}
                 placeholder="Sanil@gmail.com" 
             />
           </div>
           <div className="my-2">
             <Label>Phone Number</Label>
             <Input 
-                type="email" 
+                type="text" 
                 value={input.phoneNumber} 
                 name="phoneNumber"
-                onchange={changeEventHandler}
+                onChange={changeEventHandler}
                 placeholder="0774678234" 
             />
           </div>
@@ -75,7 +75,7 @@ const Signup = () => {
                 type="password"
                 value={input.password} 
                 name="password"
-                onchange={changeEventHandler} 
+                onChange={changeEventHandler} 
                 placeholder="Sanil"
             />
           </div>
@@ -87,7 +87,7 @@ const Signup = () => {
                   name="role"
                   value="student"
                   checked={input.role == 'student'}
-                  onchange={changeEventHandler}
+                  onChange={changeEventHandler}
                   className="cursor-pointer"
                 />
                 <Label htmlFor="r1">Student</Label>
@@ -98,7 +98,7 @@ const Signup = () => {
                   name="role"
                   value="recruiter"
                   checked={input.role == 'recruiter'}
-                  onchange={changeEventHandler}
+                  onChange={changeEventHandler}
                   className="cursor-pointer"
                 />
                 <Label htmlFor="r2">Recruiter</Label>
@@ -109,7 +109,7 @@ const Signup = () => {
                 <Input
                     accept="image/*"
                     type="file"
-                    onchange={changeFileHandler}
+                    onChange={changeFileHandler}
                     className="cursor-pointer"
                 />
             </div>
