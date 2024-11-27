@@ -27,7 +27,11 @@ const Signup = () => {
 
       const submitHandler = async (e) => {
         e.preventDefault();
-        console.log(input);
+        try {
+            
+        } catch (error) {
+            
+        }
       }
 
   return (
