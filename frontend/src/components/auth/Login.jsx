@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Navbar from "../shared/Navbar";
+import axios from "axios";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { RadioGroup } from "../ui/radio-group";
 import { Button } from "../ui/button";
 import { Link } from "react-router-dom";
+import { USER_API_END_POINT } from "@/utils/constant";
 
 const Login = () => {
   const [input, setInput] = useState({
@@ -33,7 +35,7 @@ const Login = () => {
         }
     } catch (error) {
         console.log(error);
-        toast.error(error.response?.data?.message || "Something went wrong!");
+        toast.error(error.response?.data?.message || error.message);
     }
   }
 
