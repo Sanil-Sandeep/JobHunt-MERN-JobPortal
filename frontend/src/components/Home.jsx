@@ -5,6 +5,7 @@ export const Home = () => {
   return (
     <div>
         <Navbar/>
+        <HeroSection/>
     </div>
   )
 }
