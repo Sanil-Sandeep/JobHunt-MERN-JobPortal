@@ -9,6 +9,7 @@ export const Home = () => {
         <Navbar/>
         <HeroSection/>
         <CategoryCarousel/>
+        <LatestJobs/>
     </div>
   )
 }
