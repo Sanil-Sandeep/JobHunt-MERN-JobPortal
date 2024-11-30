@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { Contact, Mail, Pen } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Label } from "./ui/label";
+import AppliedJobTable from "./AppliedJobTable";
 
 const skills = ["Html", "Css", "Javascript", "Reactjs"];
 
@@ -13,7 +14,7 @@ const Profile = () => {
   return (
     <div>
       <Navbar />
-      <div className="max-w-7xl mx-auto bg-white border border-gray-200 rounded-2xl my-5 p-8">
+      <div className="max-w-4xl mx-auto bg-white border border-gray-200 rounded-2xl my-5 p-8">
         <div className="flex justify-between">
           <div className="flex items-center gap-4">
             <Avatar className="h-24 w-24">
@@ -59,10 +60,12 @@ const Profile = () => {
                 isResume ? <a target="blank" href="https://youtube.com/@patelmernstack" className="text-blue-500 w-full hover:underline cursor-pointer">Patel MernStack</a> : <span>NA</span>
             }
         </div>
-        <div className="max-w-4xl mx-auto bg-white rounded-2xl">
-            {/* Applied Job Table   */}
-        </div>
       </div>
+      <div className="max-w-4xl mx-auto bg-white rounded-2xl">
+            <h1>Applied Jobs</h1>
+            {/* Applied Job Table   */}
+            <AppliedJobTable/>
+        </div>
     </div>
   );
 };
