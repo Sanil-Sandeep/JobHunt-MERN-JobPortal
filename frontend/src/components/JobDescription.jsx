@@ -13,14 +13,16 @@ const JobDescription = () => {
     const params = useParams();
     const jobId = params.id;
     const {singleJob} = useSelector(store=>store.job);
+    const {user} = useSelector(store=>store.auth);
     const dispatch = useDispatch();
 
     useEffect(() => {
         const fetchSingleJob = async () => {
             try {
                 const res = await axios.get(`${JOB_API_END_POINT}/get/${jobId}`,{withCredentials:true});
+                console.log(res);
                 if(res.data.success){
-                    dispatch(setSingleJob(res.data.jobs));
+                    dispatch(setSingleJob(res.data.job));
                 }
             } catch (error) {
                 console.log(error);
@@ -51,10 +53,10 @@ const JobDescription = () => {
             <h1 className='font-bold my-1'>Role: <span className='pl-4 font-normal text-gray-800'>{singleJob?.title}</span></h1>
             <h1 className='font-bold my-1'>Location: <span className='pl-4 font-normal text-gray-800'>{singleJob?.location}</span></h1>
             <h1 className='font-bold my-1'>Description: <span className='pl-4 font-normal text-gray-800'>{singleJob?.description}</span></h1>
-            <h1 className='font-bold my-1'>Experience: <span className='pl-4 font-normal text-gray-800'>{singleJob?.experience}years</span></h1>
+            <h1 className='font-bold my-1'>Experience: <span className='pl-4 font-normal text-gray-800'>{singleJob?.experience} years</span></h1>
             <h1 className='font-bold my-1'>Salary: <span className='pl-4 font-normal text-gray-800'>Rs {singleJob?.salary}</span></h1>
-            <h1 className='font-bold my-1'>Total: <span className='pl-4 font-normal text-gray-800'>4</span></h1>
-            <h1 className='font-bold my-1'>Posted Date: <span className='pl-4 font-normal text-gray-800'>17-07-2024</span></h1>
+            <h1 className='font-bold my-1'>Total: <span className='pl-4 font-normal text-gray-800'>{singleJob?.applications?.length}</span></h1>
+            <h1 className='font-bold my-1'>Posted Date: <span className='pl-4 font-normal text-gray-800'>{singleJob?.createdAt.split("T")[0]}</span></h1>
         </div>
     </div>
   )
