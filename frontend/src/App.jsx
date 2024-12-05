@@ -38,6 +38,11 @@ const appRouter = createBrowserRouter([
     path:'/profile',
     element:<Profile/>
   },
+
+  {
+    path:"/admin/companies",
+    element:<Companies/>
+  }
 ])
 
 function App() {
