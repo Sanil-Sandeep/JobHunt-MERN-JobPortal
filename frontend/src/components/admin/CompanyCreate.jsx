@@ -8,6 +8,7 @@ import { COMPANY_API_END_POINT } from "@/utils/constant";
 import { toast } from "sonner";
 import { useDispatch } from "react-redux";
 import { setSingleCompany } from "@/redux/companySlice";
+import axios from "axios";
 
 const CompanyCreate = () => {
 
