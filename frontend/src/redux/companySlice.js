@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const companySlice = createSlice({
     name:"company",
     initialState:{
-        singleCompany:null,
+        singleCompany: null,
         companies: [],
     },
     reducers:{
@@ -16,5 +16,5 @@ const companySlice = createSlice({
         }
     }
 });
-export const {setSingleCompany} = companySlice.actions;
+export const {setSingleCompany, setCompanies} = companySlice.actions;
 export default companySlice.reducer;
