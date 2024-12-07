@@ -4,11 +4,15 @@ const companySlice = createSlice({
     name:"company",
     initialState:{
         singleCompany:null,
+        companies: [],
     },
     reducers:{
         // actions
         setSingleCompany:(state,action) => {
             state.singleCompany = action.payload;
+        },
+        setCompanies:(state,action) => {
+            state.companies = action.payload;
         }
     }
 });
