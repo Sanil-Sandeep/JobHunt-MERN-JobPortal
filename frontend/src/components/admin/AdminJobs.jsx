@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import useGetAllCompanies from "@/hooks/useGetAllCompanies";
 import { useDispatch } from "react-redux";
 import { setSearchCompanyByText } from "@/redux/companySlice";
+import AdminJobsTable from "./AdminJobsTable";
 
 
 const AdminJobs = () => {
