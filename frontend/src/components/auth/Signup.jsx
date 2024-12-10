@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../shared/Navbar";
 import axios from "axios";
 import { Label } from "../ui/label";
@@ -24,7 +24,7 @@ const Signup = () => {
         file:""
       });
 
-      const {loading} = useSelector(store=>store.auth);
+      const {loading, user} = useSelector(store=>store.auth);
       const dispatch = useDispatch();
       const navigate = useNavigate();
     
@@ -66,6 +66,12 @@ const Signup = () => {
           dispatch(setLoadding(false));
         }
       }
+
+      useEffect(()=>{
+        if(user){
+          navigate("/");
+        }
+      })
 
   return (
     <div>
