@@ -51,3 +51,66 @@ To deploy this project run
   npm run dev
 ```
 
+
+<br><br>
+
+
+## 🚀 About Me
+
+<br>
+
+I'm a full stack developer...
+
+I am a student at the Sri Lanka Institute of Information Technology (SLIIT), currently studying Information Technology. I am passionate about software development and have worked on various projects that focus on improving business processes. One of my key projects is the CraftMart Payment Management System, which handles secure payment processing, income and expense tracking, and net profit calculations for an online marketplace.
+
+I am continually enhancing my skills in web development, database management, and system integration, and I am excited to pursue a career in software development, creating innovative solutions to solve real-world challenges.
+
+
+
+
+<br><br>
+
+## 🛠 Skills
+
+<br>
+
+- Javascript
+- HTML
+- MongoDB
+- React
+- Node
+- Express
+- CSS
+
+<br><br>
+
+
+
+## Run Locally
+
+<br>
+
+Clone the project
+
+```bash
+  git clone https://github.com/Sanil-Sandeep/Feedback-Management-CraftMart-MERN.git
+```
+
+Go to the project directory
+
+```bash
+  cd backend
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
